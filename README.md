@@ -108,18 +108,3 @@ To run the shell, follow these steps:
 1. Clone the repository.
 2. Run `make` in the cloned directory to compile the code.
 3. Execute `./a.out` to start the shell.
-
-# Assumptions
-The following Assumptions have been made while implementing the C-Shell
-1. There is space ( at least 1 whitespace character is required ) before and after ; to run pastevents execute command with semi-colon.
-2. On running processes in background (whose run time is less 1s) it may print the output in prompt, so, we have to press enter to take new commands.
-3. The file will not store exit on exitting terminal (as signals have not been implemented yet).
-4. The spaces between the arguments of echo (enclosed by double quotes) are not taken into consideration.
-    For example: echo "Lorem        Epsum" will output Loren Epsum
-5. Sed command is not supported by piping.
-6. Cntrl + D will work only when in input or raw_mode (as it works in bash)
-7. For SIGQUIT use Cntrl+'\'
-8. href tags are left as it as while printing output in iMan.
-9. On using fg command it will compute time for which it ran as foreground (not the whole time) and will print prompt accordingly.
-10.Given priority to piping over I/O redirection
-11.Peek and Seek won't work for '-' as it was told in doubt document.
